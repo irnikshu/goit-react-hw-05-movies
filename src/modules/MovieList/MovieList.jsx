@@ -10,9 +10,6 @@ const MovieList = ({ items, loading, error }) => {
         {title || name}
       </Link>
     </li>
-    // <Link key={id} to={'/movie/${id}'} state={{ from: location }}>
-    //   <li>{title || name}</li>
-    // </Link>
   ));
   return (
     <div>
