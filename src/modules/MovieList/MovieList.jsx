@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Loader from '../../shared/Components/Loader/Loader';
 
 const MovieList = ({ items, loading, error }) => {
-  const elements = items.map(({ id, title, name }) => (
+  const elements = items?.map(({ id, title, name }) => (
     <li key={id}>
       <Link to={`/movies/${id}`}>{title || name}</Link>
     </li>

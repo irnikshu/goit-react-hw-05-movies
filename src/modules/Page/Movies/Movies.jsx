@@ -26,7 +26,9 @@ const Movies = () => {
       }
     };
 
-    getSearchMovies();
+    if (search) {
+      getSearchMovies();
+    }
   }, [search]);
 
   const changeSearch = search => {
@@ -38,7 +40,7 @@ const Movies = () => {
       {loading && <Loader />}
       {error && <p>{error.massage}</p>}
       <MovieSearch onSubmit={changeSearch} />
-      <MovieList items={items} />
+      {items.length > 0 && <MovieList items={items} />}
     </>
   );
 };
