@@ -16,7 +16,7 @@ const Home = () => {
         setLoading(true);
         const { data } = await fetchTrendingFilms();
         setItems(data.results);
-      } catch (erorr) {
+      } catch (error) {
         setError(error.massage);
       } finally {
         setLoading(false);

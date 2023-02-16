@@ -1,8 +1,8 @@
 import axios from "axios"
 
-const API_KEY = '53f2c47317a563cd2628c68ceb6a6673';
+const API_KEY = 'd69968ee858c93c3dbc043339ed72979'
 const BASE_URL = 'https://api.themoviedb.org/3';
-const TREND_URL = `${BASE_URL}/trending/movie/week`;
+const TREND_URL = `${BASE_URL}/trending/movie/day`;
 const ID_URL = `${BASE_URL}/movie/`;
 
 export const fetchTrendingFilms = async (page = 1) => {

@@ -6,7 +6,7 @@ const MovieList = ({ items, loading, error }) => {
   const location = useLocation();
   const elements = items.map(({ id, title, name }) => (
     <li key={id}>
-      <Link state={{ from: location }} to={'/movies/${id}'}>
+      <Link state={{ from: location }} to={`/movies/${id}`}>
         {title || name}
       </Link>
     </li>
