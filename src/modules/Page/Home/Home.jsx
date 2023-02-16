@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { fetchTrendingFilms } from '../../../shared/Api/themoviedb';
 import MovieList from '../../../modules/MovieList/MovieList';

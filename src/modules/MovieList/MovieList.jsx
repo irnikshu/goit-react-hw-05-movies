@@ -1,16 +1,14 @@
 // import PropTypes from 'prop-types';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Loader from '../../shared/Components/Loader/Loader';
 
 const MovieList = ({ items, loading, error }) => {
-  const location = useLocation();
   const elements = items.map(({ id, title, name }) => (
     <li key={id}>
-      <Link state={{ from: location }} to={`/movies/${id}`}>
-        {title || name}
-      </Link>
+      <Link to={`/movies/${id}`}>{title || name}</Link>
     </li>
   ));
+
   return (
     <div>
       <ul>{elements}</ul>
