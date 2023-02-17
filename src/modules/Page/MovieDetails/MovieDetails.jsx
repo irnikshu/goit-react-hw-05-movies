@@ -5,7 +5,7 @@ import {
   Outlet,
   useLocation,
 } from 'react-router-dom';
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import { fetchFilmsById } from '../../../shared/Api/themoviedb';
 import Loader from '../../../shared/Components/Loader/Loader';
 
@@ -40,7 +40,7 @@ const MovieDetails = () => {
   const { poster_path, title, overview, genres } = movies;
   const ganresList = genres?.map(ganre => ganre.name).join(', ');
 
-  const goBack = useCallback(() => navigate(from), [navigate]);
+  const goBack = () => navigate(from);
 
   return (
     <>

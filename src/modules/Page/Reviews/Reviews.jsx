@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Loader from '../../../shared/Components/Loader/Loader';
 
-import styles from './reviews.module.scss';
+// import styles from './reviews.module.scss';
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
