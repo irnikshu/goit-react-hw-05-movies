@@ -77,8 +77,8 @@ const MovieDetails = () => {
           <Link state={{ from }} to={`reviews`}>
             Reviews
           </Link>
-          <Outlet />
         </ul>
+        <Outlet />
       </div>
     </>
   );
