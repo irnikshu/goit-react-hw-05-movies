@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/403.08b39787.chunk.css","mappings":"AAAA,0BAOE,iBAJA,kBAFA,iBACA,iBACA","sources":["modules/MovieSearch/movieSearch.module.scss"],"sourcesContent":[".input {\n  padding-left: 4px;\n  padding-right: 4px;\n  margin-right: 10px;\n}\n\n.input {\n  margin-left: 10px;\n}\n"],"names":[],"sourceRoot":""}
