@@ -1,23 +1,14 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './modules/Navbar/Navbar';
+import { BrowserRouter } from 'react-router-dom';
+import UserRoutes from './modules/UserRoutes';
 
-import Home from './modules/Page/Home/Home';
-import NotFoundPage from './modules/Page/NotFoundPage/NotFoundPage';
-import MovieDetails from './modules/Page/MovieDetails/MovieDetails';
-import Movies from './modules/Page/Movies/Movies';
+import './shared/styles/styles.scss';
 
-function App() {
+export function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/movies" element={<Movies />} />
-        <Route path="/movies/:movieId" element={<MovieDetails />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
+      <UserRoutes />
     </BrowserRouter>
   );
 }
-
-export default App;

@@ -1,1 +1,59 @@
+.addInfoDit {
+  display: flex;
+  flex-direction: column;
 
+  & a {
+    // padding-top: 5px;
+    margin-bottom: 5px;
+
+    &:hover {
+      color: rgb(24, 219, 76);
+    }
+  }
+}
+
+.titleFilm {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.filmInfo {
+  display: flex;
+  border-bottom: solid 2px;
+  border-color: grey;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.titleOverwiev {
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+.titleGenres {
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.overview,
+.ganresList {
+  margin-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+}
+.titleAddinfo {
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.addInfo {
+  margin-bottom: 30px;
+}

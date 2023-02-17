@@ -23,3 +23,13 @@ export const fetchSearchFilms = async (searchQuery, page = 1) => {
     `${SEARCH_URL}?api_key=${API_KEY}&query=${searchQuery}&page=${page}`
   );
 };
+
+export const fetchCastFilmToId = async id => {
+  return await axios.get(
+    `${ID_URL}${id}/credits?api_key=${API_KEY}`
+  );
+};
+
+export const fetchReviewsFilmToId = async id => {
+  return await axios.get(`${ID_URL}${id}/reviews?api_key=${API_KEY}`);
+};
