@@ -37,8 +37,10 @@ const MovieDetails = () => {
     getTrandingMovie(movieId);
   }, [movieId]);
 
-  const { poster_path, title, overview, genres } = movies;
+  const { poster_path, title, overview, genres, vote_average } = movies;
   const ganresList = genres?.map(ganre => ganre.name).join(', ');
+
+  const userScore = vote_average * 10;
 
   const goBack = () => navigate(from);
 
@@ -63,6 +65,8 @@ const MovieDetails = () => {
           <h2 className={styles.titleFilm}>{title}</h2>
           <h3 className={styles.titleOverwiev}>Overwiev</h3>
           <p className={styles.overview}>{overview}</p>
+          <h3 className={styles.titleUserScore}>User Score: </h3>
+          <p className={styles.UserScore}>{userScore} %</p>
           <h4 className={styles.titleGenres}>Genres</h4>
           <p className={styles.ganresList}> {ganresList}</p>
         </div>

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Loader from '../../../shared/Components/Loader/Loader';
 
-// import styles from './reviews.module.scss';
+import styles from './reviews.module.scss';
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
@@ -17,7 +17,7 @@ const Reviews = () => {
       setLoading(true);
       try {
         const { data } = await fetchReviewsFilmToId(movieId);
-        setReviews(data.cast);
+        setReviews(data.results);
       } catch (error) {
         setError(error.massage);
       } finally {
@@ -28,11 +28,10 @@ const Reviews = () => {
   }, [movieId]);
 
   const ReviewsList = reviews?.map(({ id, author, content }) => {
-    console.log(reviews);
     return (
-      <li key={id}>
+      <li key={id} className={styles.remiews}>
         <div>
-          <h3>Author: {author}</h3>
+          <h3 className={styles.author}>Author: {author}</h3>
           <p>{content}</p>
         </div>
       </li>
@@ -43,7 +42,7 @@ const Reviews = () => {
     <div>
       {loading && <Loader />}
       {error && <p>{error.massage}</p>}
-      <ul>{ReviewsList}</ul>
+      <ul className={styles.reviewsList}>{ReviewsList}</ul>
     </div>
   );
 };

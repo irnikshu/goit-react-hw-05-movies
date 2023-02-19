@@ -1,5 +1,5 @@
 import { useState } from 'react';
-// import initialState from './InitialState';
+import PropTypes from 'prop-types';
 
 import styles from './movieSearch.module.scss';
 
@@ -12,13 +12,11 @@ const MovieSearch = ({ onSubmit }) => {
   };
   const handleSubmit = e => {
     e.preventDefault();
-    //   if (search.trim() === '') {
-    //     return Notify.info('Будь ласка, введіть, що шукати!');
-    //   }
+
     onSubmit(search);
     setSearch('');
   };
-  //   const { search } = state;
+
   return (
     <>
       <form className={styles.form} onSubmit={handleSubmit}>
@@ -37,3 +35,7 @@ const MovieSearch = ({ onSubmit }) => {
 };
 
 export default MovieSearch;
+
+MovieSearch.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
