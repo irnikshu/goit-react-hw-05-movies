@@ -40,7 +40,7 @@ const MovieDetails = () => {
   const { poster_path, title, overview, genres, vote_average } = movies;
   const ganresList = genres?.map(ganre => ganre.name).join(', ');
 
-  const userScore = vote_average * 10;
+  const userScore = Math.round(vote_average * 10);
 
   const goBack = () => navigate(from);
 
